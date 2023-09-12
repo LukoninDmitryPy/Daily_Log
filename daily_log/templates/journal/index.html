@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block title %}Последние обновления на сайте{% endblock title %}
+
+{% block content %}
+<div class="card col-12">     
+  <h1 class="card-header">Задачи</h1>
+  <a href="{% url 'journal:add_note'%}">Добавить запись</a>
+    {% for post in notes %}
+    <ul>
+      <li>
+        <h4><b>{{ post.text }}</b></h4>
+      </li>
+    </ul> 
+    {% if not forloop.last %}<hr>{% endif %}
+  {% endfor %}
+</div>
+{% endblock %}

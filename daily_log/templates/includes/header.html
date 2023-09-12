@@ -1,0 +1,24 @@
+{% load static %}
+<nav class="navbar navbar-light" style="background-color: #90EE90">
+  <div class="container">
+    <a class="navbar navbar-expand-lg" href="{% url 'journal:index' %}">
+        <span>Daily</span><span>LOG</span>
+    </a>
+    <ul class="nav nav-pills">
+
+    <li class="nav-item">
+      <a class="nav-link" href="{% url 'journal:index' %}">
+      <span style=color:red>Задачи</span></a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="">
+      <span style=color:red>Сводка</span></a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="">
+      <span style=color:red>Желания</span></a>
+    </li>
+
+    </ul>
+  </div>
+</nav>
